@@ -1,0 +1,135 @@
+survey:
+  id: CCCES
+  title: "Conceptual Change Cognitive Engagement Scale (CCCES)"
+  version: "1.0"
+  status: "CONFIRMED — original 27-item CCCES (validated instrument). PI confirmed this dashboard uses the original instrument, not the separate 10-14 y.o. shortened version (that version is separate/future work, out of scope for this build)."
+  citation: >
+    Heddy, B. C., Taasoobshirazi, G., Chancey, J. B., & Danielson, R. W. (2018).
+    Developing and Validating a Conceptual Change Cognitive Engagement Instrument.
+    Frontiers in Education, 3(43), 1-9.
+  global_instructions: >
+    Think about the text that you read. Please choose the response that best
+    represents your level of agreement with each statement.
+  randomize_items: true
+
+  response_scale:
+    type: likert
+    points: 5
+    anchors:
+      1: "Never"
+      2: "Rarely"
+      3: "Sometimes"
+      4: "Often"
+      5: "Always"
+
+  constructs:
+    - id: coherency_of_message
+      label: "Coherency of Message"
+      factor: 1
+    - id: plausibility_of_message
+      label: "Plausibility of Message"
+      factor: 1
+    - id: credibility_of_message
+      label: "Credibility of Message"
+      factor: 1
+    - id: comprehensibility_of_message
+      label: "Comprehensibility of Message"
+      factor: 1
+    - id: attention
+      label: "Attention"
+      factor: 2
+    - id: culture
+      label: "Culture"
+      factor: 2
+    - id: personal_relevance
+      label: "Personal Relevance"
+      factor: 3
+
+  items:
+    - id: 1
+      construct: coherency_of_message
+      text: "While reading the text, I considered whether the information was well-organized."
+    - id: 2
+      construct: coherency_of_message
+      text: "While reading the text, I considered whether the information was easy to understand."
+    - id: 3
+      construct: coherency_of_message
+      text: "While reading the text, I considered whether the information was clear and intelligible."
+    - id: 4
+      construct: coherency_of_message
+      text: "While reading the text, I considered whether the information flowed well."
+
+    - id: 5
+      construct: plausibility_of_message
+      text: "While reading the text, I thought about whether the information was credible."
+    - id: 6
+      construct: plausibility_of_message
+      text: "While reading the text, I thought about whether the information was believable."
+    - id: 7
+      construct: plausibility_of_message
+      text: "While reading the text, I thought about whether the information made logical sense."
+    - id: 8
+      construct: plausibility_of_message
+      text: "While reading the text, I thought about whether the information was reasonable."
+
+    - id: 9
+      construct: credibility_of_message
+      text: "While reading the text, I thought about whether the source of the information was credible."
+    - id: 10
+      construct: credibility_of_message
+      text: "While reading the text, I thought about whether the source of the information was trustworthy."
+    - id: 11
+      construct: credibility_of_message
+      text: "While reading the text, I thought about whether the source of the information was believable."
+
+    - id: 12
+      construct: comprehensibility_of_message
+      text: "While reading the text, I thought about whether the information was understandable."
+    - id: 13
+      construct: comprehensibility_of_message
+      text: "While reading the text, I thought about whether the information was intelligible."
+    - id: 14
+      construct: comprehensibility_of_message
+      text: "While reading the text, I thought about whether the information was clear."
+
+    - id: 15
+      construct: attention
+      text: "I was having trouble paying attention to the text while reading it."
+    - id: 16
+      construct: attention
+      text: "I was distracted by other thoughts while reading the text."
+
+    - id: 17
+      construct: culture
+      text: "Before reading the text, I thought about whether the topic conflicts with any part of my culture (religion, political affiliation, family, etc.)."
+    - id: 18
+      construct: culture
+      text: "While reading the text, I thought about whether the topic conflicts with any part of my culture (religion, political affiliation, family, etc.)."
+    - id: 19
+      construct: culture
+      text: "While reading the text, based on my culture (religion, political affiliation, family, etc.), I thought about whether I approved of the topic."
+    - id: 20
+      construct: culture
+      text: "While reading the text, based on my culture (religion, political affiliation, family, etc.), I thought about whether I was comfortable with the topic."
+    - id: 21
+      construct: culture
+      text: "While reading the text, based on my culture (religion, political affiliation, family, etc.) I thought about whether I agreed with the topic."
+
+    - id: 22
+      construct: personal_relevance
+      text: "While reading the text, I thought about how relevant the information is to my everyday life."
+    - id: 23
+      construct: personal_relevance
+      text: "While reading the text, I thought about the practical value of the information for my life."
+    - id: 24
+      construct: personal_relevance
+      text: "While reading the text, I thought about how the reading would be helpful to my personal life."
+    - id: 25
+      construct: personal_relevance
+      text: "While reading the text, I thought about how the reading would be helpful to my career."
+    - id: 26
+      construct: personal_relevance
+      text: "While reading the text, I thought about how the reading would be helpful to my personal goals."
+    - id: 27
+      construct: personal_relevance
+      text: "While reading the text, I thought about how the reading would be helpful to me."

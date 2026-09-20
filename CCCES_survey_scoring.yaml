@@ -1,0 +1,65 @@
+scoring:
+  id: CCCES
+  version: "1.0"
+  status: >
+    CONFIRMED by PI — reverse-scoring of items 15-16 confirmed, and mean
+    (not sum) aggregation confirmed. Cleared for use scoring real data.
+  scale_range: [1, 5]
+  aggregation_method: mean   # CONFIRMED by PI
+
+  reverse_scored_items:
+    - id: 15
+      reason: >
+        CONFIRMED by PI. Item is worded as disengagement ("having trouble
+        paying attention"), opposite valence to the rest of the scale where
+        higher = more engaged.
+    - id: 16
+      reason: >
+        CONFIRMED by PI, same rationale as item 15 ("distracted by other
+        thoughts").
+
+  reverse_scoring_formula: "reverse_score = (scale_max + scale_min) - raw_score"
+
+  constructs:
+    - id: coherency_of_message
+      items: [1, 2, 3, 4]
+      factor: 1
+    - id: plausibility_of_message
+      items: [5, 6, 7, 8]
+      factor: 1
+    - id: credibility_of_message
+      items: [9, 10, 11]
+      factor: 1
+    - id: comprehensibility_of_message
+      items: [12, 13, 14]
+      factor: 1
+    - id: attention
+      items: [15, 16]
+      factor: 2
+    - id: culture
+      items: [17, 18, 19, 20, 21]
+      factor: 2
+    - id: personal_relevance
+      items: [22, 23, 24, 25, 26, 27]
+      factor: 3
+
+  factors:
+    - id: 1
+      label: "Message Characteristics"
+      constructs: [coherency_of_message, plausibility_of_message, credibility_of_message, comprehensibility_of_message]
+      variance_explained_source_study: 0.7096
+    - id: 2
+      label: "Attention and Culture"
+      constructs: [attention, culture]
+      variance_explained_source_study: 0.0766
+    - id: 3
+      label: "Personal Relevance"
+      constructs: [personal_relevance]
+      variance_explained_source_study: 0.0413
+
+  completeness_rule: "all 27 items must be answered before a response is scored and saved"
+
+  output:
+    per_construct_score: true      # mean (or sum, per aggregation_method) of that construct's items
+    per_factor_score: true         # mean (or sum) of the constructs within that factor
+    total_score: true              # overall mean (or sum) across all 27 items

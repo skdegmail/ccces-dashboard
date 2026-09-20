@@ -1,0 +1,7 @@
+```
+responses.db
+__pycache__/
+*.pyc
+VSCodeManual/
+ClaudeManual/
+```
