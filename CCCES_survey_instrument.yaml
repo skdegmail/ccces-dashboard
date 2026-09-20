@@ -48,7 +48,7 @@ survey:
   items:
     - id: 1
       construct: coherency_of_message
-      text: "While reading the text, I considered whether the information was well-organized."
+      text: "<test>While reading the text, I considered whether the information was well-organized."
     - id: 2
       construct: coherency_of_message
       text: "While reading the text, I considered whether the information was easy to understand."
