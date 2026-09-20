@@ -53,6 +53,25 @@ entry per work session; do not delete prior entries.
 
 ---
 
+## Session 3 — 2026-09 (live from-scratch test run on a reset test PC)
+**Note on this entry:** this session's work spanned a large number of exchanges and should have been logged incrementally rather than as one retroactive entry — flagging that gap honestly rather than glossing over it.
+**Prompted for:** A genuine clean-environment, timed test of the full vibe-code build guide, run by the student researcher personally on a Lenovo/Windows 11 test PC, for the purpose of reporting realistic training-session duration to the PI. The PC, GitHub account, and Railway account were all reset to a true first-time-user baseline before starting.
+**Decisions made / confirmed during the run:**
+- Component A's citation requirement: the instrument YAML's existing `citation` field must be displayed under the app's header — added to Step 2's build prompt and checkpoint, and to the Part 8 acceptance checklist.
+- Editor choice changed from VS Code to Notepad++ throughout the guide, given repeated VS Code installer failures on the test machine; VS Code references replaced across Parts 1, 3, 4, and 5.
+- All hardcoded references to the original test user's Windows username were genericized to `<YourUsername>`, with a `whoami`-based self-detection step added to Part 4.
+- Established three firm standing rules for Claude Desktop's build behavior (only build what each step asks, single app.py file only, ask rather than silently assume on ambiguity) after an early run showed significant scope creep (unrequested SQLite storage, an admin/passcode tab, and a split multi-file structure all appearing at Step 2 instead of being built incrementally as later steps).
+- Resolved a genuine tension between Step 2's "grouped by construct" instruction and the YAML's `randomize_items: true` flag (which reflects the original study's full-shuffle administration) — decided in favor of grouped-by-construct display for this teaching/demo build, flagged as revisitable if the app is ever used for real data collection.
+**Files changed:**
+- `CCCES_ClaudeDesktop_VibeCode_Guide.md` — extensively revised based on live findings, including: Claude Desktop install troubleshooting (AddPackage/MSIX failures, manual-extraction fallback, elevation quirks); Python install guidance corrected twice as python.org's download page changed; Git identity setup, PATH-staleness (fresh-terminal), and credential-flow troubleshooting; GitHub navigation fixes (Developer settings location, repo-creation default options, push-command selection); a full git-history reset procedure after manually-extracted tool folders (VSCodeManual/ClaudeManual) were accidentally committed; Railway deployment troubleshooting (GitHub App authorization, start-command requirement, log-verification-before-domain-generation, Networking/Generate Domain navigation); a live YAML-edit verification test added for the deployed Railway app; and a final explicit git-push step added to Part 9, since editing context/status files locally was never being pushed back to GitHub.
+- `context_maintenance.md`, `project_status.md` — this entry itself; both were stale through the entire test run and are only being brought current now.
+**Open items carried forward:**
+- The live test run itself was still in progress as of this entry — Part 9's final push had not yet been confirmed done at the time of writing.
+- The three-firm-rules fix to Steps 1-2 has not yet been validated on a genuinely fresh Claude Desktop conversation (it was validated via a mid-conversation correction on an already-drifted session, which is a different, weaker test) — worth a clean re-run before treating the guide as fully hardened.
+- IP/copyright specifics (carried forward from Session 2) remain open.
+
+---
+
 ## Template for future sessions
 
 ## Session N — [date]
